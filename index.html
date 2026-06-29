@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC Avançada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de IMC</h2>
+        
+        <div class="input-group">
+            <label for="genero">Gênero Biológico:</label>
+            <select id="genero">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" step="0.1" placeholder="Ex: 70.5">
+        </div>
+
+        <div class="input-group">
+            <label for="altura">Altura (metros):</label>
+            <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+        </div>
+
+        <button onclick="calcularIMC()">Calcular</button>
+
+        <div id="resultado" class="resultado-box hidden">
+            <p id="imc-valor"></p>
+            <p id="imc-classificacao"></p>
+            
+            <div class="barra-container">
+                <progress id="imc-barra" max="40" value="0"></progress>
+                <div class="barra-legendas">
+                    <span>Magreza</span>
+                    <span>Normal</span>
+                    <span>Sobrepeso</span>
+                    <span>Obesidade</span>
+                </div>
+            </div>
+
+            <p id="imc-dica"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
