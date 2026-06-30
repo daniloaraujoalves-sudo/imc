@@ -1,0 +1,152 @@
+/* Reset global - remove margens e define fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo da página - centraliza tudo vertical e horizontalmente */
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container principal do formulário - cartão branco centralizado */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título principal (h2) */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grupo de input (label + campo) - espaçamento entre campos */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Label dos campos de entrada */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* Campos de input e select - estilo padrão */
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+/* Efeito ao focar nos campos */
+input:focus, select:focus {
+    border-color: #4ed8a3;
+}
+
+/* Botão principal de Calcular */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4ed8a3;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover do botão */
+button:hover {
+    background-color: #3cb889;
+}
+
+/* Caixa de resultado (fica colorida conforme classificação) */
+.resultado-box {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+/* Cores dinâmicas do resultado (verde = normal, amarelo = alerta, vermelho = problema) */
+.status-verde { border-left: 5px solid #2ecc71; background-color: #e8f8f0; }
+.status-amarelo { border-left: 5px solid #f1c40f; background-color: #fef9e7; }
+.status-vermelho { border-left: 5px solid #e74c3c; background-color: #fdedec; }
+
+/* Classe para esconder o resultado antes de calcular */
+.hidden {
+    display: none;
+}
+
+/* Texto do valor do IMC (grande e em destaque) */
+#imc-valor {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Texto da classificação do IMC */
+#imc-classificacao {
+    font-size: 16px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Texto da dica de peso ideal */
+#imc-dica {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Container da barra de progresso */
+.barra-container {
+    margin: 15px 0;
+}
+
+/* Barra de progresso visual */
+progress {
+    width: 100%;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* Cores da barra de progresso (compatibilidade com navegadores) */
+progress::-webkit-progress-bar { background-color: #eee; }
+progress::-webkit-progress-value { background-color: #3498db; transition: width 0.5s ease; }
+/* Cor da barra no Firefox */
+progress::-moz-progress-bar { background-color: #3498db; }
+
+/* Legendas abaixo da barra de progresso (Magreza / Normal / Sobrepeso / Obesidade) */
+.barra-legendas {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #999;
+    margin-top: 4px;
+}
